@@ -7,3 +7,4 @@ Creative Coding (Canvas)
 2. **gradient** *Moving Gradient*
 3. **pixel** *Get pixel color and create a ripple effect*
 4. **Pluck strings** *Pluck strings effect*
+5. **polygons** *Rotating polygons in HTML5 canvas*
