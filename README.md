@@ -9,3 +9,4 @@ Creative Coding (Canvas)
 4. **Pluck strings** *Pluck strings effect*
 5. **polygons** *Rotating polygons in HTML5 canvas*
 6. **sheep**
+7. **swing** *Swing effect*
