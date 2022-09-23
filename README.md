@@ -10,3 +10,4 @@ Creative Coding (Canvas)
 5. **polygons** *Rotating polygons in HTML5 canvas*
 6. **sheep**
 7. **swing** *Swing effect*
+8. **wave** *Moving wave*
