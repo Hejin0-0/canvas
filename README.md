@@ -1,6 +1,6 @@
 # Canvas
 Creative Coding (Canvas)
-**Build Animated Websites with HTML, CSS and JavaScripi**  <br>__*By Jongmin Kim(cmiscm), freeCodeCamp, Franks laboratory ...*
+**Build Animated Websites with HTML, CSS and Javascript**  <br>__*By Jongmin Kim(cmiscm), freeCodeCamp, Franks laboratory ...*
 
 
 1. **bouncing** *Ball Collisions and Bouncing*
