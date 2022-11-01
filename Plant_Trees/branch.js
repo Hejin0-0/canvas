@@ -1,10 +1,10 @@
 export class Branch {
-	constructor(startX, startY, endX, endY, lineWidth) {
+	constructor(startX, startY, endX, endY, lineWidth, color) {
 		this.startX = startX;
 		this.startY = startY;
 		this.endX = endX;
 		this.endY = endY;
-		this.color = "#000000";
+		this.color = color;
 		this.lineWidth = lineWidth;
 
 		this.frame = 10; // 가지를 100등분으로 나누기 위한 변수
@@ -17,6 +17,8 @@ export class Branch {
 		// 구간별 가지가 그려질 때 끝 좌표
 		this.currentX = this.startX;
 		this.currentY = this.startY;
+
+		this.setColor();
 	}
 
 	draw(ctx) {
@@ -52,5 +54,16 @@ export class Branch {
 
 		// 다 안그렸으면 false를 리턴
 		return false;
+	}
+
+	setColor() {
+		if (this.color !== "#000000") {
+			if (this.lineWidth >= 10) {
+				this.color = "#FFFFFF";
+			} else {
+				let num = Math.floor((this.lineWidth / 10) * 15).toString(16);
+				this.color = this.color.replace(/0/gi, num);
+			}
+		}
 	}
 }
