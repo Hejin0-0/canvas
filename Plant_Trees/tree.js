@@ -1,12 +1,29 @@
 import { Branch } from "./branch.js";
 
+const COLOR_ARR = [
+	"#FF0000",
+	"#00FF00",
+	"#0000FF",
+	"#FFFF00",
+	"#FF00FF",
+	"#00FFFF",
+];
+
 export class Tree {
-	constructor(ctx, posX, posY) {
+	constructor(ctx, posX, posY, day) {
 		this.ctx = ctx;
 		this.posX = posX;
 		this.posY = posY;
 		this.branches = []; // 가지들을 담을 배열
 		this.depth = 11; // 나뭇가지의 분기(하나의 가지당 가지 5개씩 생성)
+		this.day = day;
+
+		if (this.day) {
+			this.color = "#000000";
+		} else {
+			this.color =
+				COLOR_ARR[Math.floor(Math.random() * COLOR_ARR.length)];
+		}
 
 		this.cntDepth = 0; // depth별로 그리기 위해 현재 depth 변수 선언
 		this.animation = null; // 현재 동작하는 애니메이션
@@ -35,15 +52,26 @@ export class Tree {
 
 		// random 함수를 만들어 가지들의 길이를 랜덤으로 주고
 		// depth가 0 즉, 나무 기둥을 그릴땐 최소, 최대 길이를 달리함
+		// 첫 밑둥을 만들 때는 어느정도 고정길이를 주고, 그 이후에 뻗어나오는 가지는 랜덤하게
 		const len = depth === 0 ? this.random(10, 13) : this.random(0, 11);
 
 		// 현재 depth의 역을 곱해주어 depth가 점점 늘어날 수록 길이가 가늘게 함
+		// 첫 밑둥을 최대 길이로 하고 가지가 늘어날수록 길이를 작아지게 하기위해 len뒤에 식을 넣어주ㅁ
+		// 빗변 길이와 cosθ을 곱해 x좌표
 		const endX = startX + this.cos(angle) * len * (this.depth - depth);
+		// 빗변 길이에 sinθ를 곱해 y좌표
 		const endY = startY + this.sin(angle) * len * (this.depth - depth);
 
 		// depth에 해당하는 위치의 배열에 가지를 추가
 		this.branches[depth].push(
-			new Branch(startX, startY, endX, endY, this.depth - depth)
+			new Branch(
+				startX,
+				startY,
+				endX,
+				endY,
+				this.depth - depth,
+				this.color
+			)
 		);
 
 		this.growBranch(endX, endY, angle - this.random(15, 23), depth + 1);
@@ -60,12 +88,13 @@ export class Tree {
 		}
 		// 가지들을 canvas에 draw
 		// 가지를 생성해 좌표를 branches 배열에 넣고, branch의 draw()를 호출해 draw
-		for (let i = 0; i < this.branches.length; i++) {
+		for (let i = this.cntDepth; i < this.branches.length; i++) {
 			let pass = true;
 
 			for (let j = 0; j < this.branches[i].length; j++) {
 				pass = this.branches[i][j].draw(this.ctx);
 			}
+
 			if (!pass) break;
 			this.cntDepth++;
 		}
@@ -82,6 +111,7 @@ export class Tree {
 		return (angle / 180.0) * Math.PI;
 	}
 	// random 함수 추가
+	// Math.random() MDN을 보면 나오는 사잇값 구하는 방법에 1 이상이 나오도록 뒤에 1을 더해줌
 	random(min, max) {
 		return min + Math.floor(Math.random() * (max - min + 1));
 	}
