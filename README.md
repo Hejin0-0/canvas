@@ -3,24 +3,24 @@ Creative Coding (Canvas)
 **Build Animated Websites with HTML, CSS and Javascript**  <br>__*By Jongmin Kim(cmiscm), freeCodeCamp, Franks laboratory ...*
 
 
-1. **bouncing** *Ball Collisions and Bouncing*
-2. **gradient** *Moving Gradient*
-3. **pixel** *Get pixel color and create a ripple effect*
-4. **Pluck strings** *Pluck strings effect*
-5. **polygons** *Rotating polygons in HTML5 canvas*
-6. **sheep**
-7. **swing** *Swing effect*
-8. **wave** *Moving wave*
-9. **cherry blossom** *Cherry Blossom Leaves Falling From the Sky*
-10. **particle-network**
-11. **rain**
-12. **Plant_Trees** *Growing tree*
-13. **particles_physics**
-14. **matrix** *Matrix Rain Experiments in JavaScript*
-15. **crash**
-16. **circular**
-17. **wave .2**
-18. **bubble** *A point that grows when you touch the mouse*
-19. **collision** *Collision Detection*
-20. **light** *galactic light trails*
-21. **fireworks** *Realistic Canvas Fireworks*
+> **bouncing** *Ball Collisions and Bouncing* <br>
+> **gradient** *Moving Gradient* <br>
+> **pixel** *Get pixel color and create a ripple effect* <br>
+> **Pluck strings** *Pluck strings effect* <br>
+> **polygons** *Rotating polygons in HTML5 canvas* <br>
+> **sheep** <br>
+> **swing** *Swing effect* <br>
+> **wave** *Moving wave* <br>
+> **cherry blossom** *Cherry Blossom Leaves Falling From the Sky* <br>
+> **particle-network** <br>
+> **rain** <br>
+> **Plant_Trees** *Growing tree* <br>
+> **particles_physics** <br>
+> **matrix** *Matrix Rain Experiments in JavaScript* <br>
+> **crash** <br>
+> **circular** <br>
+> **wave .2** <br>
+> **bubble** *A point that grows when you touch the mouse* <br>
+> **collision** *Collision Detection* <br>
+> **light** *galactic light trails* <br>
+> **fireworks** *Realistic Canvas Fireworks* <br>
