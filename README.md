@@ -23,3 +23,4 @@ Creative Coding (Canvas)
 18. **bubble** *A point that grows when you touch the mouse*
 19. **collision** *Collision Detection*
 20. **light** *galactic light trails*
+21. **fireworks** *Realistic Canvas Fireworks*
