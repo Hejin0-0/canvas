@@ -24,3 +24,4 @@ Creative Coding (Canvas)
 > **collision** *Collision Detection* <br>
 > **light** *galactic light trails* <br>
 > **fireworks** *Realistic Canvas Fireworks* <br>
+> **sticky-slime**
